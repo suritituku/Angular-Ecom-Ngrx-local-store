@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart UI</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+</head>
+<body>
+   <div class="CartContainer">
+   	   <div class="Header">
+   	   	<h3 class="Heading">Shopping Cart</h3>
+   	   	<h5 class="Action" (click)="clearEntries()">Remove all</h5>
+   	   </div>
+
+   	   <div  *ngFor="let entry of ( cartEntries$ | async )" class="Cart-Items">
+   	   	  <div class="image-box">
+   	   	  	<img width="30%" height="20%" src="{{ entry.product.image }}" />
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h1 class="title">{{ entry.product.name }}</h1>
+   	   	  	
+   	   	  	
+   	   	  </div>
+   	   	  <div class="counter">
+   	   	  	<div class="btn" (click)="more(entry)">+</div>
+   	   	  	<div class="count"> {{ entry.count }}</div>
+   	   	  	<div class="btn" (click)="less(entry)">-</div>
+   	   	  </div>
+   	   	  <div class="prices">
+   	   	  	<div class="amount">RS. {{entry.product.price}}</div>
+   	   	  	<div class="remove" (click)="revp(entry)"><u>Remove</u></div>
+   	   	  </div>
+         
+   	   </div>
+
+        <br>
+     
+   
+   	 <div class="checkout">
+   	 <div class="total">
+   	 	<div>
+   	 		<div class="Subtotal">Sub-Total</div>
+   	 		<div class="items">Items : {{ countProducts$ | async}} </div>
+   	 	</div>
+   	 	<div class="total-amount">Total Price: {{ totalPrice$ | async | number : '1.2-2'}}</div>
+   	 </div>
+   	 <button class="button">Checkout</button></div>
+   </div>
+</body>
+</html>

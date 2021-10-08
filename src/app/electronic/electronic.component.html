@@ -1,0 +1,57 @@
+<!-- <mat-grid-list class="matprimary" cols="4" rowHeight="1:2.0">
+  <mat-grid-tile *ngFor="let product of products()" class="product">
+
+    <mat-card  class="example-card">
+      <mat-card-header>
+       
+        <mat-card-title>{{ product.name }}</mat-card-title>
+       
+      </mat-card-header>
+      <img mat-card-image src="{{product.image}}" alt="Iphone 13 pro">
+      <mat-card-content>
+        <p>
+          {{ product.description }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="example-button-row">
+          <button style="padding: 0px 40px 0px 40px ;" mat-raised-button color="warn" (click)="buyProduct(product)" >Buy</button>
+          <button mat-mini-fab style="float: right;" color="" aria-label="Example icon button with a plus one icon">
+            <mat-icon>share</mat-icon>
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+
+
+  </mat-grid-tile>
+</mat-grid-list> -->
+
+<mat-card *ngFor="let product of products()" class="product" class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ product.name }}</mat-card-title>
+    
+    
+  </mat-card-header>
+  <img mat-card-image src="{{product.image}}" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p style="font-weight: 600;">
+      {{ product.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="example-button-row">
+      <button style="padding: 0px 40px 0px 40px ;" mat-raised-button color="warn" (click)="buyProduct(product)" >Buy</button>
+      <button mat-mini-fab style="float: right;" color="" aria-label="Example icon button with a plus one icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>
+
+
+
+
+
+
+

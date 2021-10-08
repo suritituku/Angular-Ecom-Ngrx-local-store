@@ -1,0 +1,40 @@
+
+  
+    .example-card {
+      max-width: 250px;
+     padding-left: 30px;
+     padding-right: 30px;
+      
+    }
+    .mat-badge-hidden .mat-badge-content:empty {
+      display: inline-block;
+    }
+    
+    .example-header-image {
+      background-image: url('../assets/856497_apple_512x512.png');
+      
+      background-size: cover;
+    }
+  
+    .example-header-image-oralb {
+      background-image: url('../assets/Oralb.gif');
+      
+      background-size: cover;
+    }
+    .example-header-image-sam {
+      background-image: url('../assets/png-clipart-samsung-electronics-plug-in-printer-samsung-blue-text.png');
+      
+      background-size: cover;
+    }
+
+    .example-spacer {
+        flex: 1 1 auto;
+      }
+
+    #search {
+      width: 50%;
+      height: 30px;
+      margin-left: 50px;
+      border-radius: 10px;
+      border-color: aliceblue;
+    }

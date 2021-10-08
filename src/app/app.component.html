@@ -1,0 +1,44 @@
+<div class="matprimary">
+  <div>
+    <p>
+      <mat-toolbar color="primary">
+
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>home</mat-icon>
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </button>
+        <span>eKART STORE</span>
+
+        &nbsp;&nbsp;<input type="text" id="search" matInput placeholder="Search">
+
+        <span class="example-spacer"></span>
+        <a routerLink="/home"><button mat-raised-button #menuTrigger color="warn">Home</button>
+        </a>&nbsp;
+        <a><button mat-raised-button [matMenuTriggerFor]="menu" #menuTrigger color="">My Account</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>My Profile</button>
+
+            <button mat-menu-item>Orders</button>
+            <button mat-menu-item>Wishlist</button>
+            <button mat-menu-item>Logout</button>
+          </mat-menu>
+        </a>&nbsp;
+
+
+        <a routerLink="/cart"><button class="mat-badge-content:empty " mat-raised-button #menuTrigger
+            matBadge="{{ countProducts$ }} " matBadgeHidden="{{countProducts$ === 0}}" matBadgeColor="accent"
+            color="warn">
+            <mat-icon> local_grocery_store</mat-icon>
+          </button>
+        </a>&nbsp;
+
+
+
+      </mat-toolbar>
+    </p>
+
+  </div>
+
+
+
+  <router-outlet></router-outlet>
